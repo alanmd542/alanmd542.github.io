@@ -1,10 +1,10 @@
 const header = document.querySelector("header");
 
-window.addEventListener ("scroll", function(){
-    header.classList.toggle ("sticky", this.window.scrollY > 120);
+window.addEventListener("scroll", function() {
+    header.classList.toggle("sticky", window.scrollY > 120);
 });
 
-let menu = document.querySelector('#menu-icon')
+let menu = document.querySelector('#menu-icon');
 let navlist = document.querySelector('.navlist');
 
 menu.onclick = () => {
@@ -12,8 +12,8 @@ menu.onclick = () => {
     navlist.classList.toggle('active');
 }
 
-Window.onscrpññ = () => {
+// Asegúrate de usar window.onscroll y no window.onscrpññ
+window.onscroll = () => {
     menu.classList.remove('bx-x');
-    navlist.classList.remove('active')
-
+    navlist.classList.remove('active');
 }
