@@ -521,40 +521,26 @@ footer {
 }
 /* Responsive Adjustments */
 
-/* Large screens */
-@media (min-width: 1024px) {
-    section{
-        padding: 110px 16% 90px;
-    }
-    .logo{
-        font-size: 2rem;
-    }
-    .hero{
-        height: 100vh;
-        justify-content: flex-start;
-    }
-    .main-content p{
-        width: 620px;
-    }
-}
-
 /* Tablets and small desktops */
 @media (max-width: 1023px) {
     header {
         padding: 20px 8%;
     }
-    .navlist{
-        display: none; /* Hide the navigation links on smaller screens */
+    .navlist {
+        display: none; /* Ocultar los enlaces de navegación en pantallas más pequeñas */
     }
-    #menu-icon{
+    #menu-icon {
         display: block;
     }
     .hero {
         flex-direction: column;
         text-align: center;
+        padding: 60px 20px;
     }
-    .main-content p{
+    .main-content p {
         width: 100%;
+        max-width: 500px;
+        margin: 0 auto; /* Centrar el texto */
     }
     .image-container {
         text-align: center;
@@ -563,9 +549,11 @@ footer {
         width: 100%;
         height: auto;
         max-width: 400px;
+        margin: 20px 0; /* Añadir margen para separar la imagen del texto */
     }
-    .about{
+    .about {
         grid-template-columns: 1fr;
+        padding: 40px 0; /* Reducir padding en pantallas más pequeñas */
     }
 }
 
@@ -574,28 +562,28 @@ footer {
     .hero {
         padding: 100px 20px 20px;
     }
-    .main-content h1{
+    .main-content h1 {
         font-size: 2.5rem;
     }
-    .about{
+    .about {
         grid-template-columns: 1fr;
     }
-    .about-img img{
+    .about-img img {
         height: auto;
         max-width: 300px;
     }
-    .services-content{
+    .services-content {
         grid-template-columns: 1fr;
         gap: 1rem;
     }
-    .box{
+    .box {
         padding: 60px 20px 40px;
     }
 }
 
 /* Styles for showing the menu on mobile */
 @media (max-width: 767px) {
-    #menu-icon.active ~ .navlist{
+    #menu-icon.active ~ .navlist {
         display: flex;
         flex-direction: column;
         position: absolute;
@@ -607,5 +595,6 @@ footer {
     }
     .navlist a {
         margin: 10px 0;
+        padding: 10px;
     }
 }
