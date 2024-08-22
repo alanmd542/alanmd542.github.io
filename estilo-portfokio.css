@@ -34,18 +34,17 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 40px 16%;
+    padding: 20px 8%;
     background: transparent;
     transition: all .50s ease;
 }
-
 header {
     position: static; /* Hace que el header permanezca en su lugar en el flujo normal del documento */
     width: 100%;      /* Asegura que el header ocupe todo el ancho de la página */
     background-color: var(--color-header-bg); /* Color de fondo del header */
 }
 .logo{
-    font-size: 36px;
+    font-size: 1.5rem;
     color: var(--text-color);
     font-weight: 600;
 }
@@ -56,13 +55,14 @@ span{
 
 .navlist{
     display: flex;
+    align-items: center;
 }
 
 .navlist a{
     font-size: var(--p-font);
     font-weight: 500;
     color: var(--other-color);
-    margin-left: 40px;
+    margin-left: 20px;
     transition: all .50s ease;
 }
 
@@ -73,7 +73,7 @@ span{
 
 
 #menu-icon{
-    font-size: 35px;
+    font-size: 25px;
     z-index: 10001;
     cursor: pointer;
     display: none;
@@ -81,12 +81,12 @@ span{
 
 .h-btn{
     display: inline-block ;
-    padding: 11px 26px;
+    padding: 10px 20px;
     background: transparent;
     color: var(--main-color);
     border: 2px solid var(--main-color);
     border-radius: 8px;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 600;
     transition: all .50s ease;
 }
