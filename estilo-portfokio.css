@@ -521,18 +521,57 @@ footer {
 }
 
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .navlist {
-        flex-direction: column;
         display: none; /* Ocultar menú de navegación en dispositivos móviles */
+    }
+
+    .hero {
+        padding: 50px 5%;
+    }
+
+    .inicio-img {
+        width: 80%;
+    }
+
+    .main-btn {
+        flex-direction: column;
     }
 
     .services-content, .portfolio-content {
         grid-template-columns: 1fr;
     }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 20px;
+    }
+
+    .navlist {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background: var(--bg-color);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 20px;
+    }
+
+    .navlist li {
+        margin: 10px 0;
+    }
 
     .footer-container {
-        flex-direction: column;
+        padding: 10px;
+    }
+
+    .footer-box {
+        text-align: center;
+    }
+
+    .footer-box ul {
+        padding: 0;
     }
 }
