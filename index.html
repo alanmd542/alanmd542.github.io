@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilo-portfokio.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Portfolio</title>
 </head>
@@ -13,7 +15,7 @@
     <header>
         <a href="#" class="logo">Programador <span>Front End</span>
         & <span>Edicion de videos</span></a>
-        <div class="bx bx-menu" id="menu-icon"></div>
+        <div class="bx bx-menu" id="menu-icon" data-aos="fade-in"></div>
 
         <ul class="navlist">
             <li><a href="#home">Inicio</a></li>
@@ -29,7 +31,7 @@
 
     <!---hero-->
     <section class="hero" id="home">
-        <div class="main-content">
+        <div class="main-content" data-aos="fade-in">
             <h4>Hola, Bienvenido</h4>
             <h1>Yo soy <span>Alan Deluca</span> </h1>
             <p>Hola. Mi nombre es Alan Deluca y soy un estudiante de programación en busca de oportunidades para aplicar y expandir mis habilidades. Estoy especializado en el desarrollo web y desarrollo de aplicaciones. Tengo un sólido conocimiento en HTML, CSS, JavaScript, Python y C++. En mi tiempo en el Instituto tecnico superior (teclab), he trabajado en diversos proyectos que me han permitido desarrollar mis habilidades técnicas y de resolución de problemas. Aquí, en mi portfolio, encontrarás una selección de proyectos que representan mi viaje y crecimiento como programador.</p>
@@ -52,11 +54,11 @@
 
     <!---about-->
     <section class="about" id="about">
-        <div class="about-img">
+        <div class="about-img" data-aos="zoom-in-down" >
             <img src="foto.jpg" alt="Imagen sobre mí">
         </div>
 
-        <div class="about-text">
+        <div class="about-text" data-aos="zoom-in-up" >
             <h2>Soy Programador <span>Diseñador Front End</span> <br>& Editor de videos</h2>
 
             <div class="exp-area">
@@ -91,10 +93,10 @@
 
 <!---services-->
 <section class="services" id="services">
-    <div class="center-text">
+    <div class="center-text" data-aos="fade-down" >
         <h2>Mis <span>Servicios</span></h2>
     </div>
-    <div class="services-content">
+    <div class="services-content" data-aos="zoom-in-down" >
 
         <div class="box">
             <img src="" alt="">
@@ -136,13 +138,12 @@
     </div>
 </section>
 
-
     <!---Portfolio-->
     <section class="portfolio" id="portfolio">
-        <div class="center-text">
+        <div class="center-text" data-aos="fade-down" >
             <h2>Mis <span>Proyectos</span></h2>
         </div>
-        <div class="portfolio-content">
+        <div class="portfolio-content" data-aos="zoom-in-up"  >
             <div class="row">
                 <img src="foto-tienda ni.png" alt="Proyecto 1">
                 <div class="main-row">
@@ -180,11 +181,11 @@
 
 <!-- Contact -->
 <section class="contact" id="contact">
-    <div class="center-text">
+    <div class="center-text" data-aos="fade-down" >
         <h2>Contáctame<span> </span></h2>
     </div>
 
-    <div class="contact-form">
+    <div class="contact-form" data-aos="zoom-in" >
         <form action="envio mensaje.php" method="post">
             <input type="text" name="name" placeholder="Tu nombre" required>
             <input type="email" name="email" placeholder="Email" required>
@@ -223,6 +224,17 @@
         <p>&copy; 2024 Alan Deluca. Todos los derechos reservados.</p>
     </div>
 </footer>
+
+<script src="java-portfolio.js"></script>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script>
+    AOS.init({
+        offset: 300,
+        duration: 1400,
+    });
+</script>
     
 </body>
 </html>
