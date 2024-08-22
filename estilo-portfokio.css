@@ -519,3 +519,20 @@ footer {
     flex: 1;
     margin: 0 10px; /* Ajusta el espacio lateral entre secciones */
 }
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navlist {
+        flex-direction: column;
+        display: none; /* Ocultar menú de navegación en dispositivos móviles */
+    }
+
+    .services-content, .portfolio-content {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-container {
+        flex-direction: column;
+    }
+}
