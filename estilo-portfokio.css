@@ -521,6 +521,13 @@ footer {
 }
 
 
+/* Responsive Design */
+@media (max-width: 1024px) {
+    header {
+        padding: 20px 5%;
+    }
+}
+
 @media (max-width: 768px) {
     .navlist {
         display: none; /* Ocultar menú de navegación en dispositivos móviles */
