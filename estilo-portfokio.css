@@ -519,56 +519,93 @@ footer {
     flex: 1;
     margin: 0 10px; /* Ajusta el espacio lateral entre secciones */
 }
-@media (max-width: 1700px){
-    header{
-        padding: 14px 8%;
-    }
+/* Responsive Adjustments */
+
+/* Large screens */
+@media (min-width: 1024px) {
     section{
-        padding: 90px 8% 80px;
-    }
-    .footer{
-        padding: 18px 8%;
+        padding: 110px 16% 90px;
     }
     .logo{
-        font-size: 28px;
-    }
-}
-
-@media (max-width: 1380px){
-    header{
-        padding: 20px 5%;
-    }
-    section{
-        padding: 14px 5% 80px;
-    }
-    .footer{
-        padding: 18px 5%;
+        font-size: 2rem;
     }
     .hero{
-        height: 90vh;
-        background-position: center;
+        height: 100vh;
+        justify-content: flex-start;
+    }
+    .main-content p{
+        width: 620px;
     }
 }
 
-@media (max-width: 1290px){
-    .box{
-        padding: 40px 40px 46px;
+/* Tablets and small desktops */
+@media (max-width: 1023px) {
+    header {
+        padding: 20px 8%;
     }
-    .box img{
+    .navlist{
+        display: none; /* Hide the navigation links on smaller screens */
+    }
+    #menu-icon{
+        display: block;
+    }
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    .main-content p{
         width: 100%;
-        height: 60px;
-        max-width:60px ;
     }
-
-    .box h3{
-    font-size: 21px;
+    .image-container {
+        text-align: center;
     }
-}
-
-@media (max-width: 1240px){
+    .inicio-img {
+        width: 100%;
+        height: auto;
+        max-width: 400px;
+    }
     .about{
         grid-template-columns: 1fr;
-        gap: 2rem;
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 767px) {
+    .hero {
+        padding: 100px 20px 20px;
+    }
+    .main-content h1{
+        font-size: 2.5rem;
+    }
+    .about{
+        grid-template-columns: 1fr;
+    }
+    .about-img img{
+        height: auto;
+        max-width: 300px;
+    }
+    .services-content{
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .box{
+        padding: 60px 20px 40px;
+    }
+}
+
+/* Styles for showing the menu on mobile */
+@media (max-width: 767px) {
+    #menu-icon.active ~ .navlist{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: var(--second-bg-color);
+        width: 100%;
         text-align: center;
+    }
+    .navlist a {
+        margin: 10px 0;
     }
 }
