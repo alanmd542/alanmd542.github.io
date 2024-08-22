@@ -23,6 +23,9 @@
 body{
     color: var(--text-color);
     background: var(--bg-color);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 header{
@@ -38,6 +41,27 @@ header{
     background: transparent;
     transition: all .50s ease;
 }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+  }
+
+  #menu-icon {
+    display: none; /* Ocultar en pantallas grandes */
+  }
+
+  .navlist {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  
 header {
     position: static; /* Hace que el header permanezca en su lugar en el flujo normal del documento */
     width: 100%;      /* Asegura que el header ocupe todo el ancho de la página */
@@ -521,64 +545,186 @@ footer {
 }
 
 
-/* Responsive Design */
-@media (max-width: 1024px) {
+
+
+
+/* Media Queries */
+
+@media only screen and (max-width: 1200px) {
     header {
         padding: 20px 5%;
     }
-}
 
-@media (max-width: 768px) {
-    .navlist {
-        display: none; /* Ocultar menú de navegación en dispositivos móviles */
+    #menu-icon {
+        display: block; /* Mostrar en pantallas pequeñas */
     }
 
     .hero {
-        padding: 50px 5%;
-    }
-
-    .inicio-img {
-        width: 80%;
-    }
-
-    .main-btn {
-        flex-direction: column;
-    }
-
-    .services-content, .portfolio-content {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 480px) {
-    .logo {
-        font-size: 20px;
-    }
-
-    .navlist {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        background: var(--bg-color);
-        position: absolute;
-        top: 60px;
-        left: 0;
         padding: 20px;
     }
 
-    .navlist li {
-        margin: 10px 0;
+    .main-content h1 {
+        font-size: 3.5rem;
     }
 
-    .footer-container {
+    .about-img img {
+        height: 400px;
+    }
+
+    .services-content {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .portfolio-content {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .contact-form {
+        flex: 1;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    header {
+        padding: 20px 4%;
+    }
+
+    #menu-icon {
+        display: block; /* Mostrar en pantallas pequeñas */
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .main-content h1 {
+        font-size: 2.8rem;
+    }
+
+    .about-img img {
+        height: 300px;
+    }
+
+    .services-content {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .portfolio-content {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .contact-info {
+        flex: 1;
+        padding-right: 0;
+    }
+
+    .contact-form {
+        flex: 1;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        padding: 20px 2%;
+    }
+
+    #menu-icon {
+        display: block; /* Mostrar en pantallas pequeñas */
+    }
+
+    .hero {
+        padding: 15px;
+    }
+
+    .main-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .about-img img {
+        height: 250px;
+    }
+
+    .services-content {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-content {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info,
+    .contact-form {
+        padding-right: 0;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    header {
+        padding: 15px 2%;
+    }
+
+    #menu-icon {
+        display: block; /* Mostrar en pantallas pequeñas */
+    }
+
+    .hero {
         padding: 10px;
     }
 
-    .footer-box {
-        text-align: center;
+    .main-content h1 {
+        font-size: 1.8rem;
     }
 
-    .footer-box ul {
-        padding: 0;
+    .about-img img {
+        height: 200px;
+    }
+
+    .services-content {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-content {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info,
+    .contact-form {
+        padding-right: 0;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    header {
+        padding: 10px;
+    }
+
+    #menu-icon {
+        display: block; /* Mostrar en pantallas pequeñas */
+    }
+
+    .hero {
+        padding: 5px;
+    }
+
+    .main-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .about-img img {
+        height: 150px;
+    }
+
+    .services-content {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-content {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info,
+    .contact-form {
+        padding-right: 0;
     }
 }
